@@ -17,6 +17,9 @@ namespace SkolaDB.Models
         public string TeacherLastName { get; set; }
         [Required]
         public string TeacherEmployment { get; set; }
+
+        public int YearsOfWork { get; set; }
+        public decimal Salary { get; set; }
         public ICollection<Grade> Grades { get; set; }
     }
 }

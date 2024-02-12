@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SkolaDB.Models.Data;
 
@@ -11,9 +12,11 @@ using SkolaDB.Models.Data;
 namespace SkolaDB.Migrations
 {
     [DbContext(typeof(SkolaDbContext))]
-    partial class SkolaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240212083916_UpdateTeacher")]
+    partial class UpdateTeacher
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
